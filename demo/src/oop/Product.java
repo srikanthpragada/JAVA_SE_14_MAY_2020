@@ -5,14 +5,19 @@ public class Product {
    private String name;
    private int price;
    
-   // Methods 
-   public void init(String n, int p) {
+   // Constructor 
+   public Product(String n, int p) {
 	   name = n;
 	   price  = p;
    }
    
+   // Methods 
    public void print() {
 	   System.out.println(name);
 	   System.out.println(price);
+   }
+   
+   public void setPrice(int newprice) {
+	   price = newprice;
    }
 }
