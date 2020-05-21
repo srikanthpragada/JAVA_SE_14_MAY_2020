@@ -1,23 +1,33 @@
 package oop;
 
 public class Product {
-   // Instance variables
-   private String name;
-   private int price;
-   
-   // Constructor 
-   public Product(String n, int p) {
-	   name = n;
-	   price  = p;
-   }
-   
-   // Methods 
-   public void print() {
-	   System.out.println(name);
-	   System.out.println(price);
-   }
-   
-   public void setPrice(int newprice) {
-	   price = newprice;
-   }
+	// Instance variables
+	private String name;
+	private int price;
+	// Class or static variable
+	private static double taxrate = 12.5;
+
+	// Constructor
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+
+	public Product(String n) {
+		this.name = n;
+	}
+
+	// Methods
+	public void print() {
+		System.out.println(this.name);
+		System.out.println(this.price);
+	}
+
+	public void setPrice(int newprice) {
+		this.price = newprice;
+	}
+	
+	public double getNetPrice() {
+		return this.price + (this.price * Product.taxrate / 100);
+	}
 }
