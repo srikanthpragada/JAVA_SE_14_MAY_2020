@@ -6,6 +6,14 @@ public class Product {
 	private int price;
 	// Class or static variable
 	private static double taxrate = 12.5;
+	
+	public static double getTaxrate() {
+		return taxrate;
+	}
+	
+	public static void setTaxrate(double taxrate) {
+		Product.taxrate = taxrate;
+	}
 
 	// Constructor
 	public Product(String name, int price) {
