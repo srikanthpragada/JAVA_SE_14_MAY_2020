@@ -1,6 +1,6 @@
 package oop;
 
-class Player {
+abstract class Player {
 	protected String name, country;
 
 	public Player(String name, String country) {
@@ -12,6 +12,8 @@ class Player {
 		System.out.println(this.name);
 		System.out.println(this.country);
 	}
+	
+	public abstract int getPoints();
 }
 
 class Cricketer extends Player {
@@ -62,18 +64,12 @@ public class TestPlayer {
 		// Upcasting
 		Player p;
 		p = new Cricketer("Kholi", "India", 5000, 10);
-		p.print();
+		p.print();  // Runtime polymorphism
+		System.out.println(p.getPoints()); // Runtime Polymorphism 
+		
         p  = new Footballer("Messi", "Arg", 100,70);
-        p.print();
-
-		Footballer f;
-		if (p instanceof Footballer) 
-		{
-	    	 f = (Footballer) p;  // Downcasting
-	         System.out.println(f.getPoints());
-		}
-   
-//        System.out.println(c.getPoints());
+        p.print();  // Runtime polymorphism 
+        System.out.println(p.getPoints());
 	
 	}
 
