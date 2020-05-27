@@ -14,6 +14,32 @@ abstract class Player {
 	}
 	
 	public abstract int getPoints();
+	
+
+	@Override
+	public String toString() {
+		return  name + "," + country;
+	}
+
+	@Override
+	public int hashCode() {
+		return 1;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		
+		if (obj == null)
+			return false;
+		
+		if (!(obj instanceof Player))
+			return false;
+		
+		Player other = (Player) obj;
+		return this.name.equals(other.name);
+	}
 }
 
 class Cricketer extends Player {
