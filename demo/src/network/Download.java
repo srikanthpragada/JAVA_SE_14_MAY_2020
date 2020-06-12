@@ -7,9 +7,9 @@ import java.net.URL;
 public class Download {
 
 	public static void main(String[] args) throws Exception {
-	 	URL urlobj = new URL("http://www.srikanthtechnologies.com");
+	 	URL urlobj = new URL("http://www.srikanthtechnologies.com/banner.jpg");
 		InputStream is = urlobj.openStream();
-		FileOutputStream fo = new FileOutputStream("c:\\classroom\\feb21\\st.txt");
+		FileOutputStream fo = new FileOutputStream("c:\\classroom\\may14\\st.jpg");
 		int ch = is.read();
 		while (ch != -1) {
 			fo.write(ch);
